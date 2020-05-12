@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio",
+  "main": "",
+  "dependencies": {
+    "@popperjs/core": "^2.4.0",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-jquery": "^1.1.2",
+    "gulp-purgecss": "^2.2.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "scripts": {
+    "test": "",
+    "develop": "gulp develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielmLinassi/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielmLinassi/portfolio/issues"
+  },
+  "homepage": "https://github.com/GabrielmLinassi/portfolio#readme"
+}

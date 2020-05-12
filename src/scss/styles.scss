@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700;800&display=swap");
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-header,
-body,
-footer {
+body {
   font-family: "Dosis", sans-serif;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
@@ -20,8 +21,6 @@ section {
   max-width: 1100px;
   margin: 0 auto;
 }
-
-/*  */
 
 h1 {
   font-size: 3rem;
@@ -41,4 +40,8 @@ p {
   font-size: 1.5rem;
 }
 
-/*  */
+/* navbar */
+
+.topbar-section {
+  background-color: #dddddd;
+}
