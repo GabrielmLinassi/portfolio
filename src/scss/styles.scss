@@ -1,4 +1,6 @@
 $bck-color: #e7e3e9;
+$section-margin: 1rem 0;
+$section-padding: 3rem 20px;
 
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700;800&display=swap");
 
@@ -92,7 +94,8 @@ header {
 /* about */
 
 .about {
-  margin: 3rem 0;
+  margin: $section-margin;
+  padding: $section-padding;
 }
 
 .about h2 {
@@ -103,9 +106,9 @@ header {
 /* experiences */
 
 .experiences {
-  margin: 3rem 0;
-  padding: 3rem 20px;
-  background-color: burlywood;
+  margin: $section-margin;
+  padding: $section-padding;
+  background-color: $bck-color;
 }
 
 .experiences h2 {
@@ -139,8 +142,8 @@ header {
 /* skills */
 
 .skills {
-  margin: 3rem 0;
-  padding: 3rem 20px;
+  margin: $section-margin;
+  padding: $section-padding;
 }
 
 .skills h2 {
@@ -173,6 +176,53 @@ header {
     p {
       font-size: 1rem;
       text-align: center;
+    }
+  }
+}
+
+/* contact */
+
+.contact {
+  background-color: $bck-color;
+  margin: $section-margin;
+  padding: $section-padding;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+
+    input,
+    textarea {
+      border: solid 1px #a1a0a0;
+    }
+  }
+
+  .send-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .send-icon {
+      width: 18px;
+      margin-left: 0.5rem;
     }
   }
 }
