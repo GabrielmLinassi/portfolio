@@ -99,3 +99,39 @@ header {
   text-align: center;
   margin-bottom: 1rem;
 }
+
+/* experiences */
+
+.experiences {
+  margin: 3rem 0;
+  padding: 3rem 20px;
+  background-color: burlywood;
+}
+
+.experiences h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.experience {
+  padding: 1rem 0;
+  border-bottom: dotted 1px;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  .header {
+    margin-bottom: 0.5rem;
+  }
+
+  .company {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .job {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+}
