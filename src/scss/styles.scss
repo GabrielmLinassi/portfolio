@@ -135,3 +135,44 @@ header {
     font-weight: 700;
   }
 }
+
+/* skills */
+
+.skills {
+  margin: 3rem 0;
+  padding: 3rem 20px;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.skills-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 0;
+
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-right: 1rem;
+
+    img {
+      width: 50px;
+      height: 60px;
+      align-self: center;
+      justify-self: center;
+    }
+
+    p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
