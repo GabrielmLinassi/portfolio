@@ -46,7 +46,7 @@ p {
 .subtitle {
   font-weight: bold;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 /* header */
@@ -98,6 +98,31 @@ header {
   }
 }
 
+/* about */
+
+.about {
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    .download-cv {
+      margin-top: 2rem;
+    }
+  }
+
+  img {
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    img {
+      display: block;
+      margin-left: 2rem;
+      width: 30%;
+    }
+  }
+}
+
 /* experiences */
 
 .experiences {
@@ -129,34 +154,51 @@ header {
 
 /* skills */
 
-.skills-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 2rem 0;
-
-  .skill {
+.skills {
+  .content {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    margin-right: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    img {
-      width: 50px;
-      height: 60px;
-      align-self: center;
-      justify-self: center;
+  .programming-languages-img {
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    .programming-languages-img {
+      display: block;
+      width: 40%;
     }
+  }
 
-    p {
-      font-size: 1rem;
+  .skills-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 2rem 0;
+
+    .skill {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      margin-right: 0.75rem;
       text-align: center;
+
+      img {
+        width: 55px;
+        height: 60px;
+        align-self: center;
+        justify-self: center;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   }
 }
-
 /* contact */
 
 .contact {
