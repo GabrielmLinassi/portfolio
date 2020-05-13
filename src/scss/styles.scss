@@ -219,6 +219,10 @@ header {
       flex-direction: column;
       margin: 0.5rem 0;
 
+      label {
+        font-weight: 600;
+      }
+
       input,
       textarea {
         border: solid 1px #a1a0a0;
