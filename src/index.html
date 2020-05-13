@@ -206,76 +206,69 @@
           sociais para podermos se conhecer melhor.
         </p>
         <form>
-          <div>
+          <div class="content-left">
             <div class="input-group">
               <label for="name">Name:</label>
               <input type="text" name="name" id="name" />
+            </div>
+            <div class="input-group">
+              <label for="subject">Assunto:</label>
+              <input type="text" name="subject" id="subject" />
             </div>
             <div class="input-group">
               <label for="name">Email:</label>
               <input type="text" name="email" id="email" />
             </div>
           </div>
-          <div class="input-group">
-            <label for="name">Message:</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-            ></textarea>
+          <div class="content-right">
+            <div class="input-group">
+              <label for="name">Message:</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="7"
+              ></textarea>
+            </div>
+            <button class="send-btn btn btn-primary" type="submit">
+              Enviar
+              <img
+                class="send-icon"
+                src="./images/communications.svg"
+                alt="send icon"
+              />
+            </button>
           </div>
-          <button class="send-btn btn btn-primary" type="submit">
-            Enviar
-            <img
-              class="send-icon"
-              src="./images/communications.svg"
-              alt="send icon"
-            />
-          </button>
         </form>
       </div>
     </section>
     <footer>
-      <section>
-        <div class="container">
-          <div class="social-media">
-            <a href="https://api.whatsapp.com/send?phone=48991709982">
-              <img
-                class="icon"
-                src="./images/whatsapp.svg"
-                alt="whatsapp icon"
-              />
-            </a>
-            <a href="https://www.instagram.com/gabriel.linassi/?hl=en">
-              <img
-                class="icon"
-                src="./images/instagram.svg"
-                alt="instagram icon"
-              />
-            </a>
-            <a href="https://github.com/GabrielmLinassi">
-              <img class="icon" src="./images/github.svg" alt="github icon" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/gabriel-marmitt-linassi-b7a04b156/"
-            >
-              <img
-                class="icon"
-                src="./images/linkedin.svg"
-                alt="linkedin icon"
-              />
-            </a>
-          </div>
-
-          <div class="content">
-            gabrielm.linassi@gmail.com
-          </div>
-          <div class="content">
-            Centro, Florianópolis - SC
-          </div>
+      <div class="content container">
+        <div>
+          <div>gabrielm.linassi@gmail.com</div>
+          <div>Centro, Florianópolis - SC</div>
         </div>
-      </section>
+        <div class="social-media">
+          <a href="https://github.com/GabrielmLinassi">
+            <img class="icon" src="./images/github.svg" alt="github icon" />
+          </a>
+          <a href="https://www.instagram.com/gabriel.linassi/?hl=en">
+            <img
+              class="icon"
+              src="./images/instagram.svg"
+              alt="instagram icon"
+            />
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=48991709982">
+            <img class="icon" src="./images/whatsapp.svg" alt="whatsapp icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/gabriel-marmitt-linassi-b7a04b156/"
+          >
+            <img class="icon" src="./images/linkedin.svg" alt="linkedin icon" />
+          </a>
+        </div>
+      </div>
     </footer>
 
     <script src="./js/jquery.min.js"></script>

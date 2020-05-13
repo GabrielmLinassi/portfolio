@@ -210,31 +210,49 @@ header {
 
   form {
     display: flex;
-    align-items: stretch;
     flex-direction: column;
-    max-width: 300px;
     margin: 0 auto;
-  }
 
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem 0;
+    .input-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0.5rem 0;
 
-    input,
-    textarea {
-      border: solid 1px #a1a0a0;
+      input,
+      textarea {
+        border: solid 1px #a1a0a0;
+        border-radius: 4px;
+      }
+    }
+
+    .send-btn {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .send-icon {
+        width: 18px;
+        margin-left: 0.5rem;
+      }
     }
   }
 
-  .send-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @media (min-width: 800px) {
+    form {
+      flex-direction: row;
+      background-color: #ddd9df;
+      padding: 1rem 2rem;
 
-    .send-icon {
-      width: 18px;
-      margin-left: 0.5rem;
+      .content-left {
+        width: 40%;
+      }
+
+      .content-right {
+        flex-grow: 1;
+        margin-left: 3rem;
+      }
     }
   }
 }
@@ -243,12 +261,18 @@ header {
 
 footer {
   background-color: $bck-color;
-  padding-top: 0;
-  text-align: center;
+  padding: 0.5rem 0;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   .social-media {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     padding: 0.5rem;
   }
@@ -257,4 +281,7 @@ footer {
     width: 44px;
     padding: 0.5rem;
   }
+}
+
+@media (min-width: 800px) {
 }
