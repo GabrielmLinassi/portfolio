@@ -1,8 +1,7 @@
-$bck-color: #e7e3e9;
-$section-margin: 1rem 0;
-$section-padding: 3rem 20px;
-
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700;800&display=swap");
+
+$bck-color: #e7e3e9;
+$section-padding: 3rem 1.25rem;
 
 *,
 *::before,
@@ -17,14 +16,8 @@ body {
   padding: 0;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
 section {
-  padding: 0 20px;
+  padding: $section-padding;
 }
 
 .container {
@@ -32,14 +25,14 @@ section {
   margin: 0 auto;
 }
 
+/* typegraphy */
+
 h1 {
-  font-size: 2.5rem;
-  font-weight: bolder;
+  font-size: 3.5rem;
 }
 
 h2 {
   font-size: 2.5rem;
-  font-weight: bold;
 }
 
 h3 {
@@ -50,11 +43,22 @@ p {
   font-size: 1.3rem;
 }
 
-/* navbar */
+.subtitle {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* header */
 
 header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   background-color: $bck-color;
 }
+
+/* navbar */
 
 .navbar {
   padding: 0.5rem 0;
@@ -71,85 +75,59 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.hero .hi {
-  font-size: 3.5rem;
-  font-weight: 400;
-}
+  img {
+    display: none;
+  }
 
-.hero .name {
-  font-size: 2.5rem;
-  font-weight: 400;
-}
+  @media (min-width: 800px) {
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.hero .job {
-  font-size: 1.5rem;
-}
+    img {
+      display: block;
+      width: 60%;
+    }
+  }
 
-.hero .btns {
-  padding: 15px 0;
-}
-
-/* about */
-
-.about {
-  margin: $section-margin;
-  padding: $section-padding;
-}
-
-.about h2 {
-  text-align: center;
-  margin-bottom: 1rem;
+  .call-to-action {
+    padding: 15px 0;
+  }
 }
 
 /* experiences */
 
 .experiences {
-  margin: $section-margin;
-  padding: $section-padding;
   background-color: $bck-color;
-}
 
-.experiences h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
+  .experience {
+    padding: 2rem 0;
+    border-bottom: dotted 1px;
 
-.experience {
-  padding: 1rem 0;
-  border-bottom: dotted 1px;
+    &:last-of-type {
+      border-bottom: none;
+    }
 
-  &:last-of-type {
-    border-bottom: none;
-  }
+    .header {
+      margin-bottom: 0.5rem;
+    }
 
-  .header {
-    margin-bottom: 0.5rem;
-  }
+    .company {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
 
-  .company {
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-
-  .job {
-    font-size: 1.125rem;
-    font-weight: 700;
+    .job {
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
   }
 }
 
 /* skills */
-
-.skills {
-  margin: $section-margin;
-  padding: $section-padding;
-}
-
-.skills h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
 
 .skills-cards {
   display: flex;
@@ -157,7 +135,6 @@ header {
   flex-wrap: wrap;
   align-items: center;
   margin: 2rem 0;
-  padding: 0;
 
   .skill {
     display: flex;
@@ -184,12 +161,6 @@ header {
 
 .contact {
   background-color: $bck-color;
-  padding: $section-padding;
-
-  h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
 
   p {
     text-align: center;
@@ -230,7 +201,6 @@ header {
 
 footer {
   background-color: $bck-color;
-  padding: $section-padding;
   padding-top: 0;
   text-align: center;
 
