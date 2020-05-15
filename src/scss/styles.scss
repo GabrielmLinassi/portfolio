@@ -232,6 +232,12 @@ header {
     flex-direction: column;
     margin: 0 auto;
 
+    .content-right {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
     .input-group {
       width: 100%;
       display: flex;
@@ -250,7 +256,6 @@ header {
     }
 
     .send-btn {
-      margin-left: auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -273,6 +278,7 @@ header {
       }
 
       .content-right {
+        align-items: flex-end;
         flex-grow: 1;
         margin-left: 3rem;
       }
