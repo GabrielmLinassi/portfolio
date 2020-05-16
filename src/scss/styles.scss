@@ -230,19 +230,14 @@ header {
   form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
-
-    .content-right {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-    }
 
     .input-group {
       width: 100%;
       display: flex;
       flex-direction: column;
-      margin: 0.5rem 0;
+      margin: 1rem 0;
 
       label {
         font-weight: 600;
@@ -250,12 +245,15 @@ header {
 
       input,
       textarea {
+        padding: 0.25rem 0.5rem;
         border: solid 1px #a1a0a0;
         border-radius: 4px;
       }
     }
 
     .send-btn {
+      width: 100%;
+      margin-left: auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -270,17 +268,14 @@ header {
   @media (min-width: 800px) {
     form {
       flex-direction: row;
-      background-color: #ddd9df;
       padding: 1rem 2rem;
 
       .content-left {
         width: 40%;
       }
 
-      .content-right {
-        align-items: flex-end;
-        flex-grow: 1;
-        margin-left: 3rem;
+      .send-btn {
+        width: auto;
       }
     }
   }

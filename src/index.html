@@ -208,24 +208,21 @@
           Me envie um email ou entre em contato comigo pelas minhas redes
           sociais para podermos se conhecer melhor.
         </p>
-        <form>
+        <form
+          action="https://hzjl2jisb2.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer"
+          method="POST"
+        >
           <div class="content-left">
             <div class="input-group">
               <label for="name">Name</label>
               <input type="text" name="name" id="name" />
             </div>
             <div class="input-group">
-              <label for="subject">Assunto</label>
-              <input type="text" name="subject" id="subject" />
+              <label for="reply_to">Email</label>
+              <input type="text" name="reply_to" id="reply_to" />
             </div>
             <div class="input-group">
-              <label for="name">Email</label>
-              <input type="text" name="email" id="email" />
-            </div>
-          </div>
-          <div class="content-right">
-            <div class="input-group">
-              <label for="name">Message</label>
+              <label for="message">Message</label>
               <textarea
                 name="message"
                 id="message"
@@ -242,6 +239,7 @@
               />
             </button>
           </div>
+          <div class="content-right"></div>
         </form>
       </div>
     </section>
@@ -279,28 +277,24 @@
     <script src="./js/bootstrap.min.js"></script>
 
     <script>
-      const form = document.getElementsByTagName("form")[0];
-
-      form.addEventListener("submit", (e) => {
+      document.querySelector("form").addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const name = e.target[0].value;
-        const email = e.target[1].value;
-        const subject = e.target[2].value;
-        const message = e.target[3].value;
+        const formData = new FormData(e.target);
 
-        fetch("http://localhost:3000/send", {
+        let data = {};
+
+        formData.forEach((value, input) => {
+          data[input] = value;
+        });
+
+        fetch(e.target.action, {
           method: "POST",
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            subject: subject,
-            message: message,
-          }),
+          body: JSON.stringify(data),
         })
           .then((res) => res.json())
           .then((data) => {
