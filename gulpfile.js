@@ -6,6 +6,7 @@ const htmlmin = require("gulp-htmlmin");
 const imagemin = require("gulp-imagemin");
 const minify = require("gulp-minify");
 const clean = require("gulp-clean");
+const cleanCSS = require("gulp-clean-css");
 
 gulp.task("sass", () => {
   return gulp
@@ -34,6 +35,7 @@ gulp.task("purgecss", () => {
         content: ["src/**/*.html"],
       })
     )
+    .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(gulp.dest("build/css"));
 });
 
