@@ -215,11 +215,11 @@
           <div class="content-left">
             <div class="input-group">
               <label for="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" required />
             </div>
             <div class="input-group">
               <label for="reply_to">Email</label>
-              <input type="text" name="reply_to" id="reply_to" />
+              <input type="text" name="reply_to" id="reply_to" required />
             </div>
             <div class="input-group">
               <label for="message">Message</label>
@@ -228,6 +228,7 @@
                 id="message"
                 cols="30"
                 rows="7"
+                required
               ></textarea>
             </div>
             <button class="send-btn btn btn-primary" type="submit">
@@ -298,10 +299,11 @@
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
+            alert("Obrigado pela mensagem. Logo entrarei em contato.");
+            e.target.reset();
           })
           .catch((err) => {
-            console.log(err);
+            alert("Algo deu errado ;(");
           });
       });
     </script>
