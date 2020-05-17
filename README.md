@@ -7,11 +7,14 @@ Required node.js
 Install dependencies
 `npm i`
 
-Development mode  
-run command `npm run develop`
+Development mode
+run command<br/> 
+`npm run develop`
 
 Make the build folder for production  
-run command `npm run build`
+run command<br/> 
+`npm run build`
 
 Deploy build to gh-pages  
-run command `npm run deploy`
+run command<br/> 
+`npm run deploy`
