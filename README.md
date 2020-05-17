@@ -1,5 +1,15 @@
 # portfolio
- My personal portfolio made with Bootstrap
+My personal portfolio
  
-# Run
-`npm run develop`
+Required node.js
+
+first run `npm init`
+
+Development
+run command `npm run develop`
+
+Build
+run command `npm run build`
+
+Deploy to gh-pages
+run command `npm run deploy`
