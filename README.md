@@ -5,7 +5,7 @@ It uses bootstrap just on the navbar and a lambda function for the contact form.
 Required node.js
 
 first run  
-`npm init`
+`npm i`
 
 Development  
 run command `npm run develop`
