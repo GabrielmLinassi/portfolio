@@ -1,15 +1,15 @@
-# portfolio
-My personal portfolio
+# Details
  
 Required node.js
 
-first run `npm init`
+first run  
+`npm init`
 
-Development
+Development  
 run command `npm run develop`
 
-Build
+Build  
 run command `npm run build`
 
-Deploy to gh-pages
+Deploy to gh-pages  
 run command `npm run deploy`
