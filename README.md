@@ -4,14 +4,14 @@ It uses bootstrap just on the navbar and a lambda function for the contact form.
  
 Required node.js
 
-first run  
+Install dependencies
 `npm i`
 
-Development  
+Development mode  
 run command `npm run develop`
 
-Build  
+Make the build folder for production  
 run command `npm run build`
 
-Deploy to gh-pages  
+Deploy build to gh-pages  
 run command `npm run deploy`
