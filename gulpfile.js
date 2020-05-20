@@ -80,6 +80,10 @@ gulp.task("clean-build", () => {
   return gulp.src("build", { read: false, allowEmpty: true }).pipe(clean());
 });
 
+gulp.task("cname", () => {
+  return gulp.src("CNAME").pipe(gulp.dest("build"));
+});
+
 gulp.task(
   "watch",
   gulp.series("sass", () => {
@@ -104,6 +108,7 @@ gulp.task(
     "build-js-lib",
     "minify-html",
     "minify-img",
+    "cname",
   ])
 );
 
