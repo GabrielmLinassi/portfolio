@@ -99,6 +99,7 @@ gulp.task(
   "build",
   gulp.series([
     "clean-build",
+    "sass",
     "purgecss",
     "minify-js",
     "build-js-lib",
