@@ -89,9 +89,8 @@ gulp.task(
         index: "/index.html",
       },
     });
-    gulp.watch("src/scss/**/*.scss").on("change", gulp.series(["sass"]));
-    gulp.watch("src/**/*.html").on("change", browserSync.reload);
-    gulp.watch("src/js/**/*.js").on("change", browserSync.reload);
+    gulp.watch("src/scss/**/*.scss", gulp.series("sass"));
+    gulp.watch(["src/**/*.html", "src/js/**/*.js"], browserSync.reload);
   })
 );
 
