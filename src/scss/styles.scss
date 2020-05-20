@@ -218,6 +218,45 @@ header {
     }
   }
 }
+
+/* projects */
+
+.projects {
+  p {
+    font-size: 1.125rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    padding: 30px;
+  }
+
+  .card-title {
+    font-weight: bold;
+  }
+
+  .tags {
+    padding-bottom: 1.5rem;
+
+    .tag {
+      font-size: 0.75rem;
+      background-color: #c2bdbd;
+      color: #ffffff;
+      padding: 0 1rem;
+      border-radius: 30px;
+      display: inline-block;
+    }
+  }
+
+  .btn + .btn {
+    margin-left: 0.25rem;
+  }
+}
+
 /* contact */
 
 .contact {
