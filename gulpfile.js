@@ -80,17 +80,20 @@ gulp.task("clean-build", () => {
   return gulp.src("build", { read: false, allowEmpty: true }).pipe(clean());
 });
 
-gulp.task("watch", () => {
-  browserSync.init({
-    server: {
-      baseDir: "./src",
-      index: "/index.html",
-    },
-  });
-  gulp.watch("src/scss/**/*.scss").on("change", gulp.series(["sass"]));
-  gulp.watch("src/**/*.html").on("change", browserSync.reload);
-  gulp.watch("src/js/**/*.js").on("change", browserSync.reload);
-});
+gulp.task(
+  "watch",
+  gulp.series("sass", () => {
+    browserSync.init({
+      server: {
+        baseDir: "./src",
+        index: "/index.html",
+      },
+    });
+    gulp.watch("src/scss/**/*.scss").on("change", gulp.series(["sass"]));
+    gulp.watch("src/**/*.html").on("change", browserSync.reload);
+    gulp.watch("src/js/**/*.js").on("change", browserSync.reload);
+  })
+);
 
 gulp.task(
   "build",
