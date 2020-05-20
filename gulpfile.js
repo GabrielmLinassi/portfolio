@@ -67,8 +67,12 @@ gulp.task("minify-html", () => {
 
 gulp.task("minify-img", () => {
   return gulp
-    .src("src/images/*")
-    .pipe(imagemin())
+    .src("src/images/**/*.{svg,jpg,png}")
+    .pipe(
+      imagemin({
+        progressive: true,
+      })
+    )
     .pipe(gulp.dest("build/images"));
 });
 
