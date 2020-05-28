@@ -16,13 +16,8 @@ document.querySelector("form").addEventListener("submit", (e) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      alert("Obrigado pela mensagem. Logo entrarei em contato.");
-      e.target.reset();
-    })
-    .catch((err) => {
-      alert("Algo deu errado ;(");
-    });
+  }).finally(() => {
+    alert("Obrigado pela mensagem. Logo entrarei em contato.");
+    e.target.reset();
+  });
 });
