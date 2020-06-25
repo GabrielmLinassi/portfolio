@@ -21,3 +21,14 @@ document.querySelector("form").addEventListener("submit", (e) => {
     e.target.reset();
   });
 });
+
+// ======== Scroll to top ===
+$returnTop = $("#return-to-top");
+
+$(window).scroll(() => {
+  if ($(this).scrollTop() >= 50) {
+    $returnTop.fadeIn(200);
+  } else {
+    $returnTop.fadeOut(200);
+  }
+});
