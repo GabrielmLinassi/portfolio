@@ -120,10 +120,14 @@ header {
   }
 
   @media (min-width: 800px) {
+    .img-wrap {
+      width: 100%;
+    }
+
     img {
       display: block;
       margin-left: 2rem;
-      width: 30%;
+      width: 100%;
     }
   }
 }
@@ -189,9 +193,13 @@ header {
   }
 
   @media (min-width: 800px) {
+    .img-wrap {
+      width: 100%;
+    }
+
     .programming-languages-img {
       display: block;
-      width: 40%;
+      width: 100%;
     }
   }
 
