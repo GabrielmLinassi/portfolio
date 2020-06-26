@@ -178,53 +178,6 @@ header {
 /* skills */
 
 .skills {
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .programming-languages-img {
-    display: none;
-  }
-
-  @media (min-width: 800px) {
-    .img-wrap {
-      width: 100%;
-    }
-
-    .programming-languages-img {
-      display: block;
-      width: 100%;
-    }
-  }
-
-  .skills-cards {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 2rem 0;
-
-    .skill {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      justify-content: center;
-      margin-right: 0.75rem;
-      text-align: center;
-
-      img {
-        width: 55px;
-        height: 60px;
-        align-self: center;
-        justify-self: center;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-    }
-  }
 }
 
 /* projects */
