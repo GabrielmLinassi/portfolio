@@ -1,4 +1,4 @@
-document.querySelector("form").addEventListener("submit", (e) => {
+const handleSubmit = (e) => {
   e.preventDefault();
 
   const formData = new FormData(e.target);
@@ -20,18 +20,17 @@ document.querySelector("form").addEventListener("submit", (e) => {
     alert("Obrigado pela mensagem. Logo entrarei em contato.");
     e.target.reset();
   });
-});
+};
 
 // ======== Scroll to top ===
-$returnTop = $("#return-to-top");
-
-$(window).scroll(() => {
+const handleScroll = () => {
+  $returnTop = $("#return-to-top");
   if ($(this).scrollTop() >= 50) {
     $returnTop.fadeIn(200);
   } else {
     $returnTop.fadeOut(200);
   }
-});
+};
 
 // ======== Skillbar animation ===
 function SKILLBAR_ANIME() {
@@ -52,3 +51,6 @@ function SKILLBAR_ANIME() {
 }
 
 document.addEventListener("DOMContentLoaded", SKILLBAR_ANIME);
+
+document.querySelector("form").addEventListener("submit", handleSubmit);
+window.onscroll = handleScroll;
