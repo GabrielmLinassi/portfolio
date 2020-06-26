@@ -50,7 +50,22 @@ function SKILLBAR_ANIME() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", SKILLBAR_ANIME);
+const options = {
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+const callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      SKILLBAR_ANIME();
+    }
+  });
+};
+
+let observer = new IntersectionObserver(callback, options);
+let target = document.querySelector(".skillcards");
+observer.observe(target);
 
 document.querySelector("form").addEventListener("submit", handleSubmit);
 window.onscroll = handleScroll;
