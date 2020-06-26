@@ -178,6 +178,105 @@ header {
 /* skills */
 
 .skills {
+  .skillcards {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    padding: 30px 10px;
+    overflow: hidden;
+  }
+
+  .skillcard {
+    width: 100%;
+    position: relative;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  }
+
+  .skillcard__header {
+    margin-bottom: 25px;
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .skillcard__header__title {
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+    color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .skillbar {
+    width: 100%;
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  .skillbar:nth-child(5) {
+    margin-bottom: 0;
+  }
+
+  .skillbar__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .skillbar__icon {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 1.6rem;
+    width: 25px;
+  }
+
+  .skillbar__label-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .skillbar__label {
+    font-size: 12px;
+    color: #252525;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    height: 100%;
+    display: block;
+  }
+
+  .skillbar__counter {
+    font-size: 12px;
+    color: #252525;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .skillbar__headway-wrap {
+    width: 100%;
+    background: #252525;
+  }
+
+  .skillbar__headway {
+    width: 0%;
+    height: 4px;
+    position: relative;
+    transition: width 2s linear;
+    background: #2f73ef;
+  }
 }
 
 /* projects */
