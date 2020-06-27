@@ -13,10 +13,22 @@
   </head>
   <body>
     <header>
-      <section class="navbar-light">
+      <video autoplay loop id="video-background" muted>
+        <source
+          src="https://s3-sa-east-1.amazonaws.com/download-portfolio.gabriellinassi.site/videoplayback.webm"
+          type="video/webm"
+        />
+      </video>
+      <section class="navbar-dark">
         <div class="container">
           <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="">GABRIEL LINASSI</a>
+            <a class="navbar-brand" href="">
+              <img
+                src="./images/logo.png"
+                alt="logo"
+                class="navbar-brand__icon"
+              />
+            </a>
             <button
               class="navbar-toggler"
               type="button"
@@ -54,16 +66,31 @@
       <section class="hero">
         <div class="container">
           <div class="content">
-            <div class="left-content">
-              <h1>Olá!</h1>
-              <h2>Eu sou o Gabriel</h2>
-              <h3>Front-End Web Developer</h3>
-              <div class="call-to-action">
-                <a href="#contact" class="btn btn-primary">ENTRAR EM CONTATO</a>
-                <a href="#about" class="btn btn-outline-primary">EXPLORAR</a>
-              </div>
+            <h1>GABRIEL LINASSI</h1>
+            <h3>Front-End Web Developer</h3>
+            <div class="call-to-action">
+              <a href="#contact" class="btn btn-primary">ENTRAR EM CONTATO</a>
+              <a href="#about" class="btn btn-outline-primary">EXPLORAR</a>
             </div>
-            <img src="./images/hero-bck.svg" alt="coding" />
+          </div>
+          <div class="wrapper">
+            <ul
+              class="social-icons icon-circle icon-zoom list-unstyled list-inline"
+            >
+              <li>
+                <a href="https://github.com/GabrielmLinassi" target="_blank">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/gabriel-marmitt-linassi-b7a04b156/"
+                  target="_blank"
+                >
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
