@@ -69,3 +69,18 @@ observer.observe(target);
 
 document.querySelector("form").addEventListener("submit", handleSubmit);
 window.onscroll = handleScroll;
+
+// ======== Video poster animation ===
+$("video").on("playing", () => {
+  $("video").css({ transition: "opacity .8s linear", opacity: 1 });
+
+  $(".video-bg").append(
+    `<style>
+        .video-bg:before { 
+            transition: backdrop-filter .8s linear; 
+            -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px); 
+        }
+    </style>`
+  );
+});
