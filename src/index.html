@@ -10,6 +10,14 @@
       src="https://kit.fontawesome.com/24734ac872.js"
       crossorigin="anonymous"
     ></script>
+
+    <!--  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+      type="text/javascript"
+    ></script>
+    <link rel="stylesheet" href="./css/timeline.css" />
+    <!--  -->
   </head>
   <body>
     <header>
@@ -175,17 +183,120 @@
         </div>
       </div>
     </section>
-    <section class="experiences" id="experiences">
-      <div class="content container">
-        <div class="content-left">
+    <section id="cd-timeline" class="">
+      <div class="cd-container">
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture">
+            <a
+              href="https://www.upwork.com/freelancers/~01495164d6c7d49539"
+              target="_blank"
+              ><img src="./images/up.jpg" alt="Picture"
+            /></a>
+          </div>
+          <!-- cd-timeline-img -->
+          <div class="cd-timeline-content">
+            <h2>Front-End Web Developer Freelancer</h2>
+            <h4>Upwork</h4>
+            <ul>
+              <li>
+                Design & implementar Landing Pages
+              </li>
+              <li>
+                Desenvolver codebase sustentável com React.js
+              </li>
+              <li>
+                Implementar conceito Mobile First para websites já existentes
+              </li>
+            </ul>
+            <a
+              href="https://www.upwork.com/freelancers/~01495164d6c7d49539"
+              target="_blank"
+              class="cd-read-more btn btn-outline-secondary"
+              >Visualizar perfil</a
+            >
+            <span class="cd-date">Presente</span>
+          </div>
+          <!-- cd-timeline-content -->
+        </div>
+        <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-movie">
+            <a
+              href="http://www.prevedello.com.br/new/index.php"
+              target="_blank"
+            >
+              <img src="./images/ps.jpg" alt="Movie" />
+            </a>
+          </div>
+          <!-- cd-timeline-img -->
+
+          <div class="cd-timeline-content">
+            <h2>Desenvolvedor Desktop & QA</h2>
+            <h4>Prevedello Sistemas</h4>
+            <ul>
+              <li>
+                Manter e desenvolver ferramentas de ERP com Delphi
+              </li>
+              <li>Manter e Modelar banco de dados com Firebird</li>
+              <li>Migrar sistemas & banco de dados</li>
+              <li>Integrar ERP com APIs (WMS & E-commerce)</li>
+              <li>
+                Realizar testes de qualidade e performance (QA Tester)
+              </li>
+            </ul>
+            <!-- <a href="#0" class="cd-read-more btn btn-outline-secondary">
+              Read more
+            </a> -->
+            <span class="cd-date">Jun 2018 - Jul 2019 (1 ano 2 meses)</span>
+          </div>
+          <!-- cd-timeline-content -->
+        </div>
+        <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture">
+            <a
+              href="http://www.prevedello.com.br/new/index.php"
+              target="_blank"
+            >
+              <img src="./images/ps.jpg" alt="Movie" />
+            </a>
+          </div>
+          <!-- cd-timeline-img -->
+
+          <div class="cd-timeline-content">
+            <h2>Analista de Suporte Técnico</h2>
+            <h4>Prevedello Sistemas</h4>
+            <ul>
+              <li>Suporte técnico via telefone & portal</li>
+              <li>Documentação das atividades executadas</li>
+              <li>Execução de testes de qualidade (QA Tester)</li>
+              <li>Instalação, configuração & acompanhamento de sistema ERP</li>
+            </ul>
+            <!-- <a href="#0" class="cd-read-more btn btn-outline-secondary">
+              Read more
+            </a> -->
+            <span class="cd-date">Ago 2016 - Mai 2017 (10 meses)</span>
+          </div>
+          <!-- cd-timeline-content -->
+        </div>
+        <!-- cd-timeline-block -->
+      </div>
+    </section>
+    <!-- cd-timeline -->
+
+    <!--<section class="experiences" id="experiences">
+       <div class="content container">
+         <div class="content-left">
           <h2 class="subtitle">Experiências</h2>
           <p>
             Web developer criativo e com experiência em diversos projetos muito
             legais. Rápido e voltado à resultados, tudo isso combinado com muita
             paixão e mente aberta para a inovação.
           </p>
-        </div>
-        <div class="content-right">
+        </div> -->
+    <!-- <div class="content-right">
           <div class="experience">
             <div class="header">
               <div class="company">Prevedello Sistemas</div>
@@ -220,10 +331,10 @@
               -
               <span class="to">Present</span>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div> 
       </div>
-    </section>
+    </section>-->
     <section class="skills" id="skills">
       <div class="container">
         <h2 class="subtitle">Competências</h2>
@@ -781,6 +892,7 @@
     <script src="./js/libs/jquery.min.js"></script>
     <script src="./js/libs/popper.min.js"></script>
     <script src="./js/libs/bootstrap.min.js"></script>
+    <script src="./js/timeline.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
