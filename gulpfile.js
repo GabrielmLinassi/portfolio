@@ -1,12 +1,16 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
-const purgecss = require("gulp-purgecss");
+const PurgeCSS = require("gulp-purgecss");
 const browserSync = require("browser-sync").create();
 const htmlmin = require("gulp-htmlmin");
 const imagemin = require("gulp-imagemin");
 const minify = require("gulp-minify");
 const clean = require("gulp-clean");
 const cleanCSS = require("gulp-clean-css");
+
+const purgecss = new PurgeCSS({
+  content: ["src/**/*.html", "src/**/*.css"],
+});
 
 gulp.task("sass", () => {
   return gulp
@@ -28,15 +32,13 @@ gulp.task("js", function () {
 });
 
 gulp.task("purgecss", () => {
-  return gulp
-    .src("src/css/**/*.css")
-    .pipe(
-      purgecss({
-        content: ["src/**/*.html"],
-      })
-    )
-    .pipe(cleanCSS({ compatibility: "ie8" }))
-    .pipe(gulp.dest("build/css"));
+  return (
+    gulp
+      .src("src/css/**/*.css")
+      .pipe(purgecss)
+      //.pipe(cleanCSS({ compatibility: "ie8" }))
+      .pipe(gulp.dest("build/css"))
+  );
 });
 
 gulp.task("minify-js", function () {
