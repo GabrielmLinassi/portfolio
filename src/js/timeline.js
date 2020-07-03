@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+function init() {
   var $timeline_block = $(".cd-timeline-block");
 
   //hide timeline blocks which are outside the viewport
@@ -28,4 +28,6 @@ jQuery(document).ready(function ($) {
       }
     });
   });
-});
+}
+
+window.onload = init;
