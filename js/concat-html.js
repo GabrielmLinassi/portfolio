@@ -1,1 +1,1 @@
-const urls=["experiences.html","contact.html"];function fillContent(e){document.querySelector("#experiences").innerHTML=e[0],document.querySelector("#contact").innerHTML=e[1]}Promise.all(urls.map(e=>fetch(e))).then(e=>Promise.all(e.map(e=>e.text()))).then(e=>fillContent(e));
+const urls=["experiences.html","contact.html","new_contact.html"];function fillContent(e){document.querySelector("#experiences").innerHTML=e[0],document.querySelector("#contact").innerHTML=e[1]}Promise.all(urls.map(e=>fetch(e))).then(e=>Promise.all(e.map(e=>e.text()))).then(e=>fillContent(e));
