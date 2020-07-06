@@ -5,13 +5,9 @@ Promise.all(urls.map((url) => fetch(url)))
   .then((htmls) => fillContent(htmls));
 
 function fillContent(htmls) {
-  console.log("fillcontent");
-
   const experiences = document.querySelector("#experiences");
   experiences.innerHTML = htmls[0];
 
   const contact = document.querySelector("#contact");
   contact.innerHTML = htmls[1];
-
-  console.log(contact);
 }
