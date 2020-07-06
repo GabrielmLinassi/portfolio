@@ -1,4 +1,4 @@
-const urls = ["experiences.html", "contact.html"];
+const urls = ["experiences.html", "contact.html", "new_contact.html"];
 
 Promise.all(urls.map((url) => fetch(url)))
   .then((results) => Promise.all(results.map((result) => result.text())))
