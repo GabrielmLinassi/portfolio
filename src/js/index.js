@@ -68,9 +68,9 @@ let target = document.querySelector(".skillcards");
 observer.observe(target);
 
 // after content loaded from other html file
-window.onload = () => {
+window.addEventListener("load", () => {
   document.querySelector("form").addEventListener("submit", handleSubmit);
-};
+});
 
 window.onscroll = handleScroll;
 
