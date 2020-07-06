@@ -67,7 +67,11 @@ let observer = new IntersectionObserver(callback, options);
 let target = document.querySelector(".skillcards");
 observer.observe(target);
 
-document.querySelector("form").addEventListener("submit", handleSubmit);
+// after content loaded from other html file
+window.onload = () => {
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+};
+
 window.onscroll = handleScroll;
 
 // ======== Video poster animation ===
