@@ -1,0 +1,25 @@
+@import "./styles.scss";
+
+footer {
+  background-color: $bck-color;
+  padding: 0.5rem 0;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-media {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .icon {
+    width: 44px;
+    padding: 0.5rem;
+  }
+}

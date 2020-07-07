@@ -1,13 +1,30 @@
-const urls = ["experiences.html", "contact.html", "new_contact.html"];
+import { optInContact, featureTypes } from "./feature-toggle.js";
 
-Promise.all(urls.map((url) => fetch(url)))
-  .then((results) => Promise.all(results.map((result) => result.text())))
-  .then((htmls) => fillContent(htmls));
+const allNamed = (nameToPromise) => {
+  const entries = Object.entries(nameToPromise);
+  return Promise.all(entries.map((e) => e[1])).then((results) => {
+    const nameToResult = {};
+    for (let i = 0; i < results.length; ++i) {
+      const name = entries[i][0];
+      nameToResult[name] = results[i];
+    }
+    return nameToResult;
+  });
+};
 
-function fillContent(htmls) {
+(async () => {
+  const lookup = await allNamed({
+    experiences: fetch("experiences.html").then((rs) => rs.text()),
+    contact: fetch(`${featureTypes[optInContact()].html}`).then((rs) =>
+      rs.text()
+    ),
+    footer: fetch("footer.html").then((rs) => rs.text()),
+  });
   const experiences = document.querySelector("#experiences");
-  experiences.innerHTML = htmls[0];
-
   const contact = document.querySelector("#contact");
-  contact.innerHTML = htmls[1];
-}
+  const footer = document.querySelector("footer");
+
+  experiences.innerHTML = lookup.experiences;
+  contact.innerHTML = lookup.contact;
+  footer.innerHTML = optInContact() === "new_contact" ? "" : lookup.footer;
+})();
