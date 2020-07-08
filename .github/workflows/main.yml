@@ -11,5 +11,6 @@ jobs:
         uses: actions/setup-node@v2.1.0    
         with:
           node-version: "12"      
-      - run: npm install 
+      - run: npm install
+      - run: npm build 
       
