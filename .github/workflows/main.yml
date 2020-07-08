@@ -17,4 +17,5 @@ jobs:
         env:
           EMAIL: gabrielm.linassi@hotmail.com
           GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          CNAME: gabriellinassi.site
           BUILD_DIR: build
