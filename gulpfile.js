@@ -22,11 +22,14 @@ gulp.task("sass", () => {
 
 gulp.task("js", function () {
   return gulp
-    .src([
-      "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-      "./node_modules/jquery/dist/jquery.min.js",
-      "./node_modules/@popperjs/core/dist/umd/popper.min.js",
-    ])
+    .src(
+      ["node_modules/**/bootstrap.min.js"],
+      ["node_modules/**/jquery.min.js"],
+      ["node_modules/**/popper.min.js"],
+      {
+        base: "node_modules",
+      }
+    )
     .pipe(gulp.dest("src/js/libs"))
     .pipe(browserSync.stream());
 });
