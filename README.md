@@ -24,3 +24,5 @@ It uses bootstrap just on the navbar and a lambda function for the contact form.
 #### Deploy build to gh-pages<br/>
 
 `npm run deploy`
+
+#### testing Github Actions for CD
