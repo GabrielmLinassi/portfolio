@@ -60,7 +60,7 @@ gulp.task("minify-js", function () {
 });
 
 gulp.task("build-js-lib", function () {
-  return gulp.src("src/js/libs/*.js").pipe(gulp.dest("build/js/libs"));
+  return gulp.src("src/js/libs/*.min.js").pipe(gulp.dest("build/js/libs"));
 });
 
 gulp.task("minify-html", () => {
