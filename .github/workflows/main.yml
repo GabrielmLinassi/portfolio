@@ -12,5 +12,7 @@ jobs:
         with:
           node-version: "12"      
       - run: npm install
+      - name: Build
+        uses: ./            
       - run: npm run-script build 
       
