@@ -4,9 +4,22 @@ on:
       - master
       
 jobs:
-  deploy:    
+  build:    
     runs-on: ubuntu-latest
-    steps:      
-      - uses: actions/checkout@v2                 
+    steps:
+      - uses: actions/checkout@v2      
+      - name: Build            
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+          check-latest: true           
       - run: npm i
-      - run: npm run deploy      
+      - run: npm run build
+        
+      - name: Deploy to GitHub Pages
+        uses: Cecilapp/GitHub-Pages-deploy@master
+        env:
+          EMAIL: gabrielm.linassi@hotmail.com
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BUILD_DIR: build
+          
