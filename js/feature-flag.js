@@ -1,1 +1,0 @@
-function featureIsActive(e){return{"opt-in":userHasOptedIntoFeature(e),active:!0,inactive:!1}[getFeatureStatusByFeatureName(e)]}const getFeatureStatusByFeatureName=e=>{return{"new-contact-page":"active"}[e]||"inactive"};function userHasOptedIntoFeature(e){}
