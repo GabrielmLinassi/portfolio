@@ -16,10 +16,4 @@ jobs:
       - run: npm i
       - run: npm run build
         
-      - name: Deploy to GitHub Pages
-        uses: Cecilapp/GitHub-Pages-deploy@master
-        env:
-          EMAIL: gabrielm.linassi@hotmail.com
-          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BUILD_DIR: build
           
