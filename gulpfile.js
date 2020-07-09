@@ -22,14 +22,11 @@ gulp.task("sass", () => {
 
 gulp.task("js", function () {
   return gulp
-    .src(
-      ["node_modules/**/bootstrap.min.js"],
-      ["node_modules/**/jquery.min.js"],
-      ["node_modules/**/popper.min.js"],
-      {
-        base: "node_modules",
-      }
-    )
+    .src([
+      "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+      "./node_modules/jquery/dist/jquery.min.js",
+      "./node_modules/@popperjs/core/dist/umd/popper.min.js",
+    ])
     .pipe(gulp.dest("src/js/libs"))
     .pipe(browserSync.stream());
 });
@@ -60,7 +57,7 @@ gulp.task("minify-js", function () {
 });
 
 gulp.task("build-js-lib", function () {
-  return gulp.src("src/js/libs/*.min.js").pipe(gulp.dest("build/js/libs"));
+  return gulp.src("src/js/libs/*.js").pipe(gulp.dest("build/js/libs"));
 });
 
 gulp.task("minify-html", () => {
@@ -110,6 +107,7 @@ gulp.task(
     "sass",
     "purgecss",
     "minify-js",
+    "js",
     "build-js-lib",
     "minify-html",
     "minify-img",
