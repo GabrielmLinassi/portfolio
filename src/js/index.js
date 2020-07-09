@@ -16,10 +16,19 @@ const handleSubmit = (e) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
-  }).finally(() => {
-    alert("Obrigado pela mensagem. Logo entrarei em contato.");
-    e.target.reset();
-  });
+  })
+    .then((res) => {
+      if (res.status !== 200) {
+        console.log("ErrLog:", res);
+        alert("Algo deu errado ;((");
+        return;
+      }
+      e.target.reset();
+      alert("Obrigado pela mensagem. Logo entrarei em contato.");
+    })
+    .catch((err) => {
+      console.log("ErrLog::Fetching Error: ", err);
+    });
 };
 
 // ======== Scroll to top ===
