@@ -14,22 +14,43 @@
           autoplay
         ></lottie-player>
       </div>
-      <form>
+      <form
+        action="https://hzjl2jisb2.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer"
+        method="POST"
+      >
         <div class="form-group">
           <label for="name">Seu Nome</label>
-          <input type="text" class="form-control" id="name" />
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            id="name"
+            required
+          />
         </div>
         <div class="form-group">
           <label for="reply_to">Endereço de Email</label>
-          <input type="email" class="form-control" id="reply_to" />
+          <input
+            type="email"
+            class="form-control"
+            name="reply_to"
+            id="reply_to"
+            required
+          />
         </div>
         <div class="form-group">
           <label for="subject">Assunto</label>
-          <input type="text" class="form-control" id="subject" />
+          <input type="text" class="form-control" name="subject" id="subject" />
         </div>
         <div class="form-group">
           <label for="message">Mensagem</label>
-          <textarea class="form-control" id="message" rows="3"></textarea>
+          <textarea
+            class="form-control"
+            name="message"
+            id="message"
+            rows="3"
+            required
+          ></textarea>
         </div>
         <button type="submit" class="btn btn-primary" id="btn-submit">
           Enviar
