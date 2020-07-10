@@ -56,6 +56,10 @@ gulp.task("minify-js", function () {
     .pipe(gulp.dest("build/js"));
 });
 
+gulp.task("config-file", () => {
+  return gulp.src("src/config.js").pipe(gulp.dest("build"));
+});
+
 gulp.task("build-js-lib", function () {
   return gulp.src("src/js/libs/*.js").pipe(gulp.dest("build/js/libs"));
 });
@@ -107,6 +111,7 @@ gulp.task(
     "sass",
     "purgecss",
     "minify-js",
+    "config-file",
     "js",
     "build-js-lib",
     "minify-html",
