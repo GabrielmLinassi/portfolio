@@ -1,21 +1,19 @@
+//import cfg from "../config.js";
+
 const handleSubmit = (e) => {
   e.preventDefault();
 
+  const url = cfg.EMAIL_API;
   const formData = new FormData(e.target);
+  const formDataToJson = Object.fromEntries(formData);
 
-  let data = {};
-
-  formData.forEach((value, input) => {
-    data[input] = value;
-  });
-
-  fetch(e.target.action, {
+  fetch(url, {
     method: "POST",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(formDataToJson),
   })
     .then((res) => {
       if (res.status !== 200) {
@@ -33,11 +31,11 @@ const handleSubmit = (e) => {
 
 // ======== Scroll to top ===
 const handleScroll = () => {
-  $returnTop = $("#return-to-top");
-  if ($(this).scrollTop() >= 50) {
-    $returnTop.fadeIn(200);
+  var returnTop = $("#return-to-top");
+  if ($(document).scrollTop() >= 50) {
+    $(returnTop).fadeIn(200);
   } else {
-    $returnTop.fadeOut(200);
+    $(returnTop).fadeOut(200);
   }
 };
 
