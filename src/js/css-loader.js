@@ -3,17 +3,11 @@
    ========================================================================== 
 */
 
-import { optInContact } from "./feature-toggle.js";
-
-var bodyClasses = optInContact();
+var bodyClasses = "";
 
 var pagetypeCssData = [
   {
-    test: /(?=\bcontact\b)/, // Leaving this blank will load the files below on every page
-    files: ["contact.css", "footer.css"],
-  },
-  {
-    test: /(?=\bnew_contact\b)/,
+    test: "",
     files: ["new_contact.css"],
   },
 ];

@@ -10,18 +10,6 @@ function getQueryVariable(variable) {
   return false;
 }
 
-const featureTypes = {
-  new_contact: {
-    html: "new_contact.html",
-    css: "new_contact.css",
-  },
-  contact: {
-    html: "contact.html",
-    css: "contact.css",
-  },
-};
+const featureTypes = {};
 
-const optInContact = () =>
-  getQueryVariable("ff") === "new_contact" ? "new_contact" : "contact";
-
-export { optInContact, featureTypes };
+export { featureTypes };
