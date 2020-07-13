@@ -56,19 +56,51 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#about">SOBRE</a>
+                  <a
+                    class="nav-link"
+                    href="#about"
+                    data-mlr-text
+                    id="nav-link-about"
+                  >
+                    SOBRE
+                  </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#experiences">EXPERIÊNCIAS</a>
+                  <a
+                    class="nav-link"
+                    href="#experiences"
+                    data-mlr-text
+                    id="nav-link-experiences"
+                  >
+                    EXPERIÊNCIAS
+                  </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#skills">HABILIDADES</a>
+                  <a
+                    class="nav-link"
+                    href="#skills"
+                    data-mlr-text
+                    id="nav-link-skills"
+                    >HABILIDADES</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#projects">PROJETOS</a>
+                  <a
+                    class="nav-link"
+                    href="#projects"
+                    data-mlr-text
+                    id="nav-link-projects"
+                    >PROJETOS</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contact">CONTATO</a>
+                  <a
+                    class="nav-link"
+                    href="#contact"
+                    data-mlr-text
+                    id="nav-link-contact"
+                    >CONTATO</a
+                  >
                 </li>
               </ul>
             </div>
@@ -81,8 +113,20 @@
             <h1>GABRIEL LINASSI</h1>
             <h3>Front-End Web Developer</h3>
             <div class="call-to-action">
-              <a href="#contact" class="btn btn-primary">ENTRAR EM CONTATO</a>
-              <a href="#about" class="btn btn-outline-primary">EXPLORAR</a>
+              <a
+                href="#contact"
+                class="btn btn-primary"
+                data-mlr-text
+                id="hero-contact"
+                >ENTRAR EM CONTATO</a
+              >
+              <a
+                href="#about"
+                class="btn btn-outline-primary"
+                data-mlr-text
+                id="hero-explore"
+                >EXPLORAR</a
+              >
             </div>
           </div>
           <div class="wrapper">
@@ -109,7 +153,7 @@
     </header>
     <section class="about" id="about">
       <div class="container">
-        <h2 class="subtitle">Sobre Mim</h2>
+        <h2 class="subtitle" data-mlr-text id="about-subtitle">Sobre Mim</h2>
         <div class="content">
           <div class="content-text">
             <!-- <p>
@@ -124,11 +168,19 @@
               comigo.
             </p> -->
 
-            <p>
-              <b><span style="font-size: 30px;">Olá!</span></b> Eu sou o Gabriel
-              <span role="img" aria-label="hi">👋</span>
+            <p
+              id="about-greetings-highlight"
+              style="font-size: 30px; font-weight: 700; display: inline-block;"
+              data-mlr-text
+            >
+              Olá!
             </p>
-            <p>
+            <p data-mlr-text id="about-my-name" style="display: inline-block;">
+              Eu sou o Gabriel
+            </p>
+            <span role="img" aria-label="hi">👋</span>
+
+            <p id="about-content1" data-mlr-text>
               Atualmente sou Front-End Web Developer Freelancer pela UpWorks,
               anteriormente Delphi Desktop Developer. A minha linguagem de
               programação favorita é
@@ -137,13 +189,13 @@
               <span role="img" aria-label="react">⚛️</span>
               mas sempre estou disposto a aprender novas tecnologias.
             </p>
-            <p>
+            <p id="about-content2" data-mlr-text>
               Adoro trabalhar em grupo mas também prezo por liberdade e
               independência <span role="img" aria-label="heart">❤️</span>. Amo
               programar e busco sempre estar atualizado sobre as últimas
               ferramentas e tecnologias.
             </p>
-            <p>
+            <p id="about-content3" data-mlr-text>
               De todas as minhas soft skills, acredito que a mais forte seja a
               <span class="underline--magical">empatia</span>. Sempre busco
               entender as outras pessoas, respeitá-las, indiferente de suas
@@ -151,12 +203,12 @@
               própria personalidade e meu ponto de vista claro e objetivo.
             </p>
 
-            <p>
+            <p id="about-content4" data-mlr-text>
               No meu tempo livre, busco melhorar meus conhecimentos técnicos
               fazendo projetos pessoais envolvendo as linguagens de programação
               e tecnologias que eu quero dominar.
             </p>
-            <p>
+            <p id="about-content5" data-mlr-text>
               Ultimamente, tenho tido muita vontade de colaborar com projetos
               open source ou, até mesmo, de começar um por conta própria. Dê uma
               olhada no meu
@@ -175,6 +227,8 @@
               download="curriculo.pdf"
               target="_blank"
               class="download-cv btn btn-primary"
+              id="about-content6"
+              data-mlr-text
             >
               Download Currículo
             </a>
@@ -188,19 +242,21 @@
     <section id="experiences"></section>
     <section class="skills" id="skills">
       <div class="container">
-        <h2 class="subtitle">Competências</h2>
-        <p>
+        <h2 class="subtitle" id="skills-subtitle" data-mlr-text>
+          Competências
+        </h2>
+        <p id="skills-content1" data-mlr-text>
           Como desenvolvedor, geralmente me encontro no meio de centenas, as
           vezes milhares de linhas de código. Se eu não tenho muito trabalho,
           faço bootcamp para melhorar minha skill de desenvolvimento.
         </p>
-        <p>
+        <p id="skills-content2" data-mlr-text>
           Para mim, programar é arte — a maioria de nós só enxerga o resultado
           final como se fosse uma coisa única, mas na verdade é um grande quebra
           cabeça, onde estou criando alguma coisa a partir do nada. Ter essa
           habilidade de criar é uma experiência incrível.
         </p>
-        <p>
+        <p id="skills-content3" data-mlr-text>
           Só para esclarecer, você não precisa ser um artista profissional ou
           escritor para criar. Basta se sentar e acompanhar o processo.
         </p>
@@ -208,7 +264,11 @@
         <div class="skillcards">
           <div class="skillcard">
             <div class="skillcard__header">
-              <h2 class="skillcard__header__title">
+              <h2
+                class="skillcard__header__title"
+                id="skillcard1-title"
+                data-mlr-text
+              >
                 Programação
               </h2>
             </div>
@@ -312,7 +372,11 @@
           <!--  -->
           <div class="skillcard">
             <div class="skillcard__header">
-              <h2 class="skillcard__header__title">
+              <h2
+                class="skillcard__header__title"
+                id="skillcard2-title"
+                data-mlr-text
+              >
                 SOFT SKILLS
               </h2>
             </div>
@@ -326,7 +390,11 @@
                   <h5 class="skillbar__counter"></h5>
                 </div>
                 <div class="skillbar__content">
-                  <div class="skillbar__headway-wrap">
+                  <div
+                    class="skillbar__headway-wrap"
+                    id="skillcard2-skillbar1"
+                    data-mlr-text
+                  >
                     <div
                       class="skillbar__headway"
                       data-skillbar-label="Flexibilidade e resiliência"
@@ -345,7 +413,11 @@
                   <h5 class="skillbar__counter"></h5>
                 </div>
                 <div class="skillbar__content">
-                  <div class="skillbar__headway-wrap">
+                  <div
+                    class="skillbar__headway-wrap"
+                    id="skillcard2-skillbar2"
+                    data-mlr-text
+                  >
                     <div
                       class="skillbar__headway"
                       data-skillbar-label="Trabalho em equipe"
@@ -364,7 +436,11 @@
                   <h5 class="skillbar__counter"></h5>
                 </div>
                 <div class="skillbar__content">
-                  <div class="skillbar__headway-wrap">
+                  <div
+                    class="skillbar__headway-wrap"
+                    id="skillcard2-skillbar3"
+                    data-mlr-text
+                  >
                     <div
                       class="skillbar__headway"
                       data-skillbar-label="Organização"
@@ -383,7 +459,11 @@
                   <h5 class="skillbar__counter"></h5>
                 </div>
                 <div class="skillbar__content">
-                  <div class="skillbar__headway-wrap">
+                  <div
+                    class="skillbar__headway-wrap"
+                    id="skillcard2-skillbar4"
+                    data-mlr-text
+                  >
                     <div
                       class="skillbar__headway"
                       data-skillbar-label="Empatia"
@@ -405,7 +485,11 @@
                   <h5 class="skillbar__counter"></h5>
                 </div>
                 <div class="skillbar__content">
-                  <div class="skillbar__headway-wrap">
+                  <div
+                    class="skillbar__headway-wrap"
+                    id="skillcard2-skillbar5"
+                    data-mlr-text
+                  >
                     <div
                       class="skillbar__headway"
                       data-skillbar-label="Pensamento Crítico"
@@ -419,7 +503,11 @@
           <!--  -->
           <div class="skillcard">
             <div class="skillcard__header">
-              <h2 class="skillcard__header__title">
+              <h2
+                class="skillcard__header__title"
+                id="skillcard3-title"
+                data-mlr-text
+              >
                 IDIOMAS
               </h2>
             </div>
@@ -433,7 +521,11 @@
                   <h5 class="skillbar__counter"></h5>
                 </div>
                 <div class="skillbar__content">
-                  <div class="skillbar__headway-wrap">
+                  <div
+                    class="skillbar__headway-wrap"
+                    id="skillcard3-skillbar1"
+                    data-mlr-text
+                  >
                     <div
                       class="skillbar__headway"
                       data-skillbar-label="Português"
@@ -452,7 +544,11 @@
                   <h5 class="skillbar__counter"></h5>
                 </div>
                 <div class="skillbar__content">
-                  <div class="skillbar__headway-wrap">
+                  <div
+                    class="skillbar__headway-wrap"
+                    id="skillcard3-skillbar2"
+                    data-mlr-text
+                  >
                     <div
                       class="skillbar__headway"
                       data-skillbar-label="Inglês"
@@ -469,7 +565,9 @@
     </section>
     <section class="projects" id="projects">
       <div class="container">
-        <h2 class="subtitle">Projetos</h2>
+        <h2 class="subtitle" id="projects-subtitle" data-mlr-text>
+          Projetos
+        </h2>
         <div class="cards">
           <div class="card" style="width: 18rem;">
             <img
@@ -478,19 +576,29 @@
               alt="Image Gallery Webpage"
             />
             <div class="card-body">
-              <h5 class="card-title">CRUD Sample</h5>
-              <p class="card-text">
+              <h5 class="card-title">
+                CRUD Sample
+              </h5>
+              <p class="card-text" id="projects-card1-text" data-mlr-text>
                 Exemplo de CRUD App com autenticação
               </p>
               <div class="tags">
-                <div class="tag">React.js</div>
-                <div class="tag">HTML</div>
-                <div class="tag">CSS</div>
+                <div class="tag">
+                  React.js
+                </div>
+                <div class="tag">
+                  HTML
+                </div>
+                <div class="tag">
+                  CSS
+                </div>
               </div>
               <a
                 href="https://sample-crud.gabriellinassi.site"
                 target="_blank"
                 class="btn btn-primary"
+                id="projects-card1-see"
+                data-mlr-text
                 >Visualizar</a
               >
               <a
@@ -523,6 +631,8 @@
                 href="https://gabrielmlinassi.github.io/app-landing-page/"
                 target="_blank"
                 class="btn btn-primary"
+                id="projects-card2-see"
+                data-mlr-text
               >
                 Visualizar
               </a>
@@ -543,8 +653,10 @@
               alt="Image Gallery Webpage"
             />
             <div class="card-body">
-              <h5 class="card-title">Galeria de Imagens</h5>
-              <p class="card-text">
+              <h5 class="card-title" id="projects-card3-title" data-mlr-text>
+                Galeria de Imagens
+              </h5>
+              <p class="card-text" id="projects-card3-text" data-mlr-text>
                 Webpage para buscar e listar Imagens
               </p>
               <div class="tags">
@@ -557,6 +669,8 @@
                 href="https://gabrielmlinassi.github.io/react-tailwind-gallery-app/"
                 target="_blank"
                 class="btn btn-primary"
+                id="projects-card3-see"
+                data-mlr-text
                 >Visualizar</a
               >
               <a
@@ -577,7 +691,7 @@
             />
             <div class="card-body">
               <h5 class="card-title">Blog</h5>
-              <p class="card-text">
+              <p class="card-text" id="projects-card4-text" data-mlr-text>
                 Exemplo de um blog simples
               </p>
               <div class="tags">
@@ -588,6 +702,8 @@
                 href="https://gabrielmlinassi.github.io/simple-blog/"
                 target="_blank"
                 class="btn btn-primary"
+                id="projects-card4-see"
+                data-mlr-text
                 >Visualizar
               </a>
               <a
@@ -619,6 +735,8 @@
                 href="https://gabrielmlinassi.github.io/music-streamming-app-landing-page/src/index.html"
                 target="_blank"
                 class="btn btn-primary"
+                id="projects-card5-see"
+                data-mlr-text
                 >Visualizar</a
               >
               <a
@@ -638,8 +756,10 @@
               alt="Book library Web App"
             />
             <div class="card-body">
-              <h5 class="card-title">Biblioteca Digital</h5>
-              <p class="card-text">
+              <h5 class="card-title" id="projects-card6-title" data-mlr-text>
+                Biblioteca Digital
+              </h5>
+              <p class="card-text" id="projects-card6-text" data-mlr-text>
                 Web App para armazenar livros digitais
               </p>
               <div class="tags">
@@ -652,6 +772,8 @@
                 href="https://protected-anchorage-56372.herokuapp.com/"
                 target="_blank"
                 class="btn btn-primary"
+                id="projects-card6-see"
+                data-mlr-text
                 >Visualizar</a
               >
               <a
@@ -671,6 +793,7 @@
     <a href="#" id="return-to-top">
       <i class="fas fa-arrow-up"></i>
     </a>
+    <select id="mbPOCControlsLangDrop"></select>
 
     <script type="module" src="./config.js"></script>
     <script type="module" src="./js/concat-html.js"></script>

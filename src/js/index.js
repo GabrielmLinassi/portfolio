@@ -1,4 +1,20 @@
 import cfg from "../config.js";
+import { mlr } from "./lang/translation.js";
+
+// feature flag switch (ff) - Support to multi-language
+if (cfg.ffLocation) {
+  const dropbox = document.getElementById("mbPOCControlsLangDrop");
+  dropbox.style.display = "block";
+  mlr({
+    dropID: "mbPOCControlsLangDrop",
+    stringAttribute: "data-mlr-text",
+    chosenLang: "Portuguese",
+  });
+} else {
+  const dropbox = document.getElementById("mbPOCControlsLangDrop");
+  dropbox.style.display = "none";
+}
+// end of ff switch
 
 const handleSubmit = (e) => {
   e.preventDefault();

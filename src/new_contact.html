@@ -1,10 +1,12 @@
 <div class="container">
-  <h2 class="subtitle">Entre em contato</h2>
+  <h2 class="subtitle" id="contact-subtitle" data-mlr-text>
+    Entre em contato
+  </h2>
   <!--  -->
   <div class="contact__wrap">
     <div class="contact__form">
       <div class="form__title">
-        <p>Me envie uma mensagem</p>
+        <p id="contact-title" data-mlr-text>Me envie uma mensagem</p>
         <lottie-player
           src="https://assets9.lottiefiles.com/private_files/lf30_KSf8U7.json"
           background="transparent"
@@ -16,7 +18,7 @@
       </div>
       <form>
         <div class="form-group">
-          <label for="name">Seu Nome</label>
+          <label for="name" id="contact-lb-name" data-mlr-text>Seu Nome</label>
           <input
             type="text"
             class="form-control"
@@ -26,7 +28,9 @@
           />
         </div>
         <div class="form-group">
-          <label for="reply_to">Endereço de Email</label>
+          <label for="reply_to" id="contact-lb-email" data-mlr-text
+            >Endereço de Email</label
+          >
           <input
             type="email"
             class="form-control"
@@ -36,7 +40,9 @@
           />
         </div>
         <div class="form-group">
-          <label for="subject">Assunto</label>
+          <label for="subject" id="contact-lb-subject" data-mlr-text
+            >Assunto</label
+          >
           <input
             type="text"
             class="form-control"
@@ -46,7 +52,9 @@
           />
         </div>
         <div class="form-group">
-          <label for="message">Mensagem</label>
+          <label for="message" id="contact-lb-msg" data-mlr-text
+            >Mensagem</label
+          >
           <textarea
             class="form-control"
             name="message"
@@ -55,7 +63,12 @@
             required
           ></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" id="btn-submit">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          id="btn-submit"
+          data-mlr-text
+        >
           Enviar
           <i class="fas fa-paper-plane submit-icon"></i>
         </button>
@@ -63,15 +76,19 @@
     </div>
     <div class="contact__info">
       <div class="info__content">
-        <p class="info__title">Informações de Contato</p>
+        <p class="info__title" id="contact-info-title" data-mlr-text>
+          Informações de Contato
+        </p>
         <div class="info__card">
           <i class="card__icon fas fa-map-marker-alt"></i>
-          <p class="card__content">Centro <br />Palmitinho - RS, 98430-000</p>
+          <p class="card__content" id="contact-info-address" data-mlr-text>
+            Palmitinho - RS, Brasil<br />Centro, 98430-000
+          </p>
         </div>
         <div class="info__card">
           <i class="card__icon fas fa-phone-alt"></i>
           <p class="card__content">
-            (48) 9 9170-9982
+            (55) 48 9 9170-9982
           </p>
         </div>
         <div class="info__card">
