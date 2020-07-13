@@ -43,7 +43,7 @@ gulp.task("purgecss", () => {
 
 gulp.task("minify-js", function () {
   return gulp
-    .src("src/js/*.js")
+    .src("src/js/**/*.js")
     .pipe(
       minify({
         noSource: true,
