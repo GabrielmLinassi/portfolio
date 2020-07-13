@@ -5,3 +5,5 @@ src/css
 src/js/**/*.min.js
 
 build
+
+.stylelintrc
