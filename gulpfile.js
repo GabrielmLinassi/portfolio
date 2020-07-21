@@ -90,6 +90,10 @@ gulp.task("cname", () => {
   return gulp.src("CNAME").pipe(gulp.dest("build"));
 });
 
+gulp.task("i18n", () => {
+  return gulp.src("src/i18n/**").pipe(gulp.dest("build/i18n"));
+});
+
 gulp.task(
   "watch",
   gulp.series("sass", () => {
@@ -117,6 +121,7 @@ gulp.task(
     "minify-html",
     "minify-img",
     "cname",
+    "i18n",
   ])
 );
 

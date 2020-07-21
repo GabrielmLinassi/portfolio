@@ -1,20 +1,78 @@
 import cfg from "../config.js";
-import { mlr } from "./lang/translation.js";
 
-// feature flag switch (ff) - Support to multi-language
-if (cfg.ffLocation) {
-  const dropbox = document.getElementById("mbPOCControlsLangDrop");
-  dropbox.style.display = "block";
-  mlr({
-    dropID: "mbPOCControlsLangDrop",
-    stringAttribute: "data-mlr-text",
-    chosenLang: "Portuguese",
-  });
-} else {
-  const dropbox = document.getElementById("mbPOCControlsLangDrop");
-  dropbox.style.display = "none";
+function do_translate() {
+  $("html").i18n();
+
+  $("#skillcard2-skillbar1").attr(
+    "data-skillbar-label",
+    $.i18n("skillcard2-skillbar1")
+  );
+
+  $("#skillcard2-skillbar2").attr(
+    "data-skillbar-label",
+    $.i18n("skillcard2-skillbar2")
+  );
+
+  $("#skillcard2-skillbar3").attr(
+    "data-skillbar-label",
+    $.i18n("skillcard2-skillbar3")
+  );
+
+  $("#skillcard2-skillbar4").attr(
+    "data-skillbar-label",
+    $.i18n("skillcard2-skillbar4")
+  );
+
+  $("#skillcard2-skillbar5").attr(
+    "data-skillbar-label",
+    $.i18n("skillcard2-skillbar5")
+  );
+
+  $("#skillcard3-skillbar1").attr(
+    "data-skillbar-label",
+    $.i18n("skillcard3-skillbar1")
+  );
+
+  $("#skillcard3-skillbar2").attr(
+    "data-skillbar-label",
+    $.i18n("skillcard3-skillbar2")
+  );
 }
-// end of ff switch
+
+jQuery(function ($) {
+  $.i18n({})
+    .load({
+      en: "./i18n/en.json",
+      pt: "./i18n/pt.json",
+    })
+    .done(() => {
+      $(".lang-switch").on("change", (e) => {
+        const lang = e.target.options[e.target.selectedIndex].value;
+        $.i18n().locale = lang;
+        document.documentElement.lang = lang;
+        do_translate();
+      });
+      do_translate();
+
+      // Add observer for the skillbar animation
+      const options = {
+        rootMargin: "0px",
+        threshold: 0.3,
+      };
+
+      const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            SKILLBAR_ANIME();
+          }
+        });
+      };
+
+      let observer = new IntersectionObserver(callback, options);
+      let target = document.querySelector(".skillcards");
+      observer.observe(target);
+    });
+});
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -72,23 +130,6 @@ function SKILLBAR_ANIME() {
     SKILLBAR_HEADWAY.style.width = `${SKILLBAR_VALUE}%`;
   });
 }
-
-const options = {
-  rootMargin: "0px",
-  threshold: 0.3,
-};
-
-const callback = (entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      SKILLBAR_ANIME();
-    }
-  });
-};
-
-let observer = new IntersectionObserver(callback, options);
-let target = document.querySelector(".skillcards");
-observer.observe(target);
 
 // after content loaded from other html file
 window.addEventListener("load", () => {
