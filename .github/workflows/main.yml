@@ -4,15 +4,19 @@ on:
       - master
       
 jobs:
-  main:    
+  main:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: build
-        uses: actions/checkout@v2                       
-      - run: npm i
-      - run: npm run build            
+      - uses: actions/checkout@v2
       
-      - name: deploy
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Build
+        run: npm run build
+      
+      - name: Deploy
         uses: Cecilapp/GitHub-Pages-deploy@master
         env:
           EMAIL: gabrielm.linassi@hotmail.com
