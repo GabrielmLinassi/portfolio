@@ -147,6 +147,10 @@ header {
   flex-direction: column;
   height: 100vh; }
 
+.lang-switch .flag {
+  width: 30px;
+  height: 30px; }
+
 /* navbar */
 .navbar {
   padding: 0.5rem 0; }
