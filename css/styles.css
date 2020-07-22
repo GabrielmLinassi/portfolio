@@ -189,6 +189,14 @@ header {
   .about .content .download-cv {
     margin-top: 2rem; }
 
+.about p[data-i18n="about-greetings-highlight"] {
+  font-size: 30px;
+  font-weight: 700;
+  display: inline-block; }
+
+.about p[data-i18n="about-my-name"] {
+  display: inline-block; }
+
 .about img {
   display: none; }
 
