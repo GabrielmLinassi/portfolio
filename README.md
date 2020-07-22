@@ -8,6 +8,8 @@ It uses bootstrap just on the navbar and a lambda function for the contact form.
 - Javascript modules, ES6...
 - Lottie animations
 - Gulp
+- Localization Jquery Plugin i18n for multilingual support
+- Bootstrap Select Jquery Plugin for custom select box
 
 #### Install dependencies<br/>
 
